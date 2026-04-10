@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: empresta-web
+    restart: unless-stopped
+    ports:
+      - "5003:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - empresta-net
+
+  db:
+    image: mariadb:10.11
+    container_name: empresta-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: empresta
+      MYSQL_ROOT_PASSWORD: Ec0l0g!@
+    volumes:
+      - empresta-db-data:/var/lib/mysql
+    networks:
+      - empresta-net
+
+networks:
+  empresta-net:
+    driver: bridge
+
+volumes:
+  empresta-db-data:

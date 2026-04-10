@@ -1,0 +1,16 @@
+.git
+.env
+vendor
+node_modules
+docker-compose.yml
+Dockerfile
+.dockerignore
+storage/*.key
+storage/logs/*
+storage/app/public/*
+bootstrap/cache/*
+public/storage
+phpunit.xml
+.editorconfig
+.styleci.yml
+REPLICADO_PATHLOG
