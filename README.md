@@ -1,6 +1,10 @@
-## Conceito
-
 Empréstimos de materiais.
+
+## 🐳 Rodando com Docker
+
+Para facilitar o desenvolvimento e o deploy, este projeto conta com suporte total ao Docker. Para ver as instruções de como rodar o sistema em containers, acesse:
+
+👉 **[Guia do Docker (DOCKER.md)](DOCKER.md)**
 
 ## Funcionalidades
 
